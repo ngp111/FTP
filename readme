@@ -1,0 +1,29 @@
+FTP
+
+Server has all files stored in ftp_files
+Client gets all files in ftp_downloads
+
+open :
+	arguments: ip address(127.0.0.1), port_number(12001)
+	username: your pc's username
+	password: anonymous
+cd :
+	arguments: file name/file path
+ls :
+	returns list of files/directories via control connection
+get :
+	arguments: file name
+	transfers file to ftp_downloads(client side) from ftp_files(server side)
+put :
+	arguments: file name
+	transfers file to ftp_files(server side) from ftp_downloads(client side)
+quit :
+	closes all connections(both welcoming, and allocated control connection)
+mkdir :
+	arguments: directory name
+	makes a directory with given name in current directory of server
+close :
+	server close only allocated control socket
+lcd :
+	arguments: file name/path
+	changes the local directory
